@@ -30,5 +30,6 @@ public class Main {
 
         ArrayList<EventoAuditoria> a = servico.buscarEventosPorRecurso(TipoRecurso.PEDIDO);
         System.out.println(a);
+
     }
 }

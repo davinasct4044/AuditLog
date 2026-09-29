@@ -23,6 +23,10 @@ public class EventoAuditoria {
     }
 
     public EventoAuditoria(Usuario usuario, TipoAcao acao, TipoRecurso recurso) {
+        if (usuario == null || acao == null || recurso == null) {
+            throw new IllegalArgumentException("Usuário, ação e recurso são obrigatórios.");
+        }
+
         this.usuario = usuario;
         this.acao = acao;
         this.recurso = recurso;
