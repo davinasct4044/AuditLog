@@ -9,6 +9,19 @@ public class EventoAuditoria {
     private TipoRecurso recurso;
     private LocalDateTime data = LocalDateTime.now();
 
+    public Usuario getUsuario() {
+        return usuario;
+    }
+    public TipoAcao getAcao() {
+        return acao;
+    }
+    public TipoRecurso getRecurso() {
+        return recurso;
+    }
+    public LocalDateTime getData() {
+        return data;
+    }
+
     public EventoAuditoria(Usuario usuario, TipoAcao acao, TipoRecurso recurso) {
         this.usuario = usuario;
         this.acao = acao;
@@ -22,7 +35,7 @@ public class EventoAuditoria {
                 + "Usuário: " + usuario + "\n"
                 + "Ação: " + acao + "\n"
                 + "Recurso: " + recurso + "\n"
-                + "Data: " + data.format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss:SS"));
+                + "Data: " + data.format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss:SSS"));
     }
 
 }
