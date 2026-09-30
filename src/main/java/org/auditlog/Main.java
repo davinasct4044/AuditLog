@@ -1,6 +1,7 @@
 package org.auditlog;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -28,7 +29,7 @@ public class Main {
         servico.registrarEvento(evento4);
         servico.registrarEvento(evento12);
 
-        ArrayList<EventoAuditoria> a = servico.buscarEventosPorRecurso(TipoRecurso.PEDIDO);
+        List<EventoAuditoria> a = servico.buscarEventosPorRecurso(TipoRecurso.PEDIDO);
         System.out.println(a);
 
     }

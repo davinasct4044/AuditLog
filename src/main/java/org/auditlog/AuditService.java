@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class AuditService {
-    private ArrayList<EventoAuditoria> listaDeEventos = new ArrayList<>();
+    private List<EventoAuditoria> listaDeEventos = new ArrayList<>();
 
     public void registrarEvento(EventoAuditoria eventoAuditoria) {
         if (eventoAuditoria == null) {
@@ -19,7 +19,7 @@ public class AuditService {
         return Collections.unmodifiableList(listaDeEventos);
     }
 
-    public ArrayList<EventoAuditoria> buscarEventosPorUsuario(String nome) {
+    public List<EventoAuditoria> buscarEventosPorUsuario(String nome) {
         ArrayList<EventoAuditoria> buscalistaDeEventos = new ArrayList<>();
         for (EventoAuditoria i : listaDeEventos) {
             if (i.getUsuario().getNome().equals(nome)) {
@@ -28,7 +28,7 @@ public class AuditService {
         }
         return buscalistaDeEventos;
     }
-    public ArrayList<EventoAuditoria> buscarEventosPorAcao(TipoAcao acao) {
+    public List<EventoAuditoria> buscarEventosPorAcao(TipoAcao acao) {
         ArrayList<EventoAuditoria> buscalistaDeEventos = new ArrayList<>();
         for (EventoAuditoria i : listaDeEventos) {
             if (i.getAcao() == acao) {
@@ -37,7 +37,7 @@ public class AuditService {
         }
         return buscalistaDeEventos;
     }
-    public ArrayList<EventoAuditoria> buscarEventosPorRecurso(TipoRecurso recurso) {
+    public List<EventoAuditoria> buscarEventosPorRecurso(TipoRecurso recurso) {
         ArrayList<EventoAuditoria> buscalistaDeEventos = new ArrayList<>();
         for (EventoAuditoria i : listaDeEventos) {
             if (i.getRecurso() == recurso) {
