@@ -29,7 +29,7 @@ public class Main {
         servico.registrarEvento(evento4);
         servico.registrarEvento(evento12);
 
-        List<EventoAuditoria> a = servico.buscarEventosPorRecurso(TipoRecurso.PEDIDO);
+        List<EventoAuditoria> a = servico.buscarEventosPorRecurso(TipoRecurso.SISTEMA);
         System.out.println(a);
 
     }

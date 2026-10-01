@@ -28,6 +28,7 @@ public class AuditService {
         }
         return buscalistaDeEventos;
     }
+
     public List<EventoAuditoria> buscarEventosPorAcao(TipoAcao acao) {
         ArrayList<EventoAuditoria> buscalistaDeEventos = new ArrayList<>();
         for (EventoAuditoria i : listaDeEventos) {
@@ -37,6 +38,7 @@ public class AuditService {
         }
         return buscalistaDeEventos;
     }
+
     public List<EventoAuditoria> buscarEventosPorRecurso(TipoRecurso recurso) {
         ArrayList<EventoAuditoria> buscalistaDeEventos = new ArrayList<>();
         for (EventoAuditoria i : listaDeEventos) {
